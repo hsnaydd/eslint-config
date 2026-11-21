@@ -72,6 +72,9 @@ importers:
       prettier:
         specifier: ^3.10.1
         version: 3.10.1
+      react:
+        specifier: ^19.3.1
+        version: 19.3.1
       storybook:
         specifier: ^10.6.8
         version: 10.6.8(prettier@3.10.1)(react@19.3.1)

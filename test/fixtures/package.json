@@ -1,0 +1,15 @@
+{
+  "name": "fixtures",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "next": "*",
+    "react": "*"
+  },
+  "devDependencies": {
+    "@storybook/react-vite": "*",
+    "@testing-library/react": "*",
+    "prettier": "*",
+    "vitest": "*"
+  }
+}

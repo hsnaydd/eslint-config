@@ -43,6 +43,11 @@
     "*.js",
     "rules"
   ],
+  "scripts": {
+    "test": "node --test 'test/*.test.mjs'",
+    "format": "prettier . --write",
+    "format:check": "prettier . --check"
+  },
   "packageManager": "pnpm@10.18.3",
   "engines": {
     "node": "^22.13.0 || >=24"
@@ -86,6 +91,7 @@
     "eslint": "^10.15.0",
     "jest": "^30.5.2",
     "prettier": "^3.10.1",
+    "react": "^19.3.1",
     "storybook": "^10.6.8",
     "typescript": "^5.9.3"
   }
