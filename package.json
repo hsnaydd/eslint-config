@@ -1,12 +1,31 @@
 {
-  "name": "@atolye15/eslint-config",
+  "name": "@hsnaydd/eslint-config",
   "version": "2.0.0",
-  "description": "Atolye15 shareable config for ESLint.",
+  "description": "Shareable ESLint config for TypeScript, React, Next.js and Node.js, with Jest, Vitest and Storybook presets and Prettier formatting.",
+  "keywords": [
+    "eslint",
+    "eslint-config",
+    "eslintconfig",
+    "flat-config",
+    "typescript",
+    "react",
+    "nextjs",
+    "node",
+    "jest",
+    "vitest",
+    "storybook",
+    "prettier"
+  ],
+  "author": "Hasan Aydoğdu",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/atolye15/eslint-config.git"
+    "url": "git+https://github.com/hsnaydd/eslint-config.git"
   },
+  "bugs": {
+    "url": "https://github.com/hsnaydd/eslint-config/issues"
+  },
+  "homepage": "https://github.com/hsnaydd/eslint-config#readme",
   "type": "module",
   "main": "./index.js",
   "exports": {
@@ -19,6 +38,14 @@
     "./node": "./node.js",
     "./vitest": "./vitest.js",
     "./package.json": "./package.json"
+  },
+  "files": [
+    "*.js",
+    "rules"
+  ],
+  "packageManager": "pnpm@10.18.3",
+  "engines": {
+    "node": "^22.13.0 || >=24"
   },
   "peerDependencies": {
     "eslint": "^10.0.0",
