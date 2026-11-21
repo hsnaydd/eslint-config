@@ -25,3 +25,7 @@ yarn-error.log*
 
 # Eslint
 .eslintcache
+
+# Claude Code
+.claude/plans
+.claude/settings.local.json
