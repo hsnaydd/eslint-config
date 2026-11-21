@@ -1,4 +1,5 @@
 import commentsConfigs from '@eslint-community/eslint-plugin-eslint-comments/configs';
+import { fixupConfigRules } from '@eslint/compat';
 import js from '@eslint/js';
 import importPlugin from 'eslint-plugin-import';
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
@@ -16,8 +17,8 @@ import typescript from './rules/typescript.js';
 export default defineConfig([
   js.configs.recommended,
   tseslint.configs.recommended,
-  importPlugin.flatConfigs.recommended,
-  importPlugin.flatConfigs.typescript,
+  // eslint-plugin-import still uses context APIs that were removed in ESLint 10.
+  fixupConfigRules([importPlugin.flatConfigs.recommended, importPlugin.flatConfigs.typescript]),
   commentsConfigs.recommended,
   eslintPluginPrettierRecommended,
   imports,

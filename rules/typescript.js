@@ -46,9 +46,9 @@ export default {
     '@typescript-eslint/no-implied-eval': 'error',
 
     // Disallow function declarations that contain unsafe references inside loop statements.
-    // https://typescript-eslint.io/rules/no-loop-func/
-    'no-loop-func': 'off',
-    '@typescript-eslint/no-loop-func': 'error',
+    // The typescript-eslint version of this rule is deprecated in favor of the core rule.
+    // https://eslint.org/docs/latest/rules/no-loop-func
+    'no-loop-func': 'error',
 
     // Disallow variable declarations from shadowing variables declared in the outer scope.
     // https://typescript-eslint.io/rules/no-shadow/

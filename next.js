@@ -11,6 +11,9 @@ export default defineConfig([
       '@next/next': nextPlugin,
     },
     rules: {
+      // The core-web-vitals config only lists the rules it changes and extends
+      // the recommended config in the legacy format, so both are spread here.
+      ...nextPlugin.configs.recommended.rules,
       ...nextPlugin.configs['core-web-vitals'].rules,
     },
   },

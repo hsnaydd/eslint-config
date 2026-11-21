@@ -1,3 +1,4 @@
+import { fixupConfigRules } from '@eslint/compat';
 import jsxA11y from 'eslint-plugin-jsx-a11y';
 import reactPlugin from 'eslint-plugin-react';
 import testingLibrary from 'eslint-plugin-testing-library';
@@ -12,14 +13,17 @@ import react from './rules/react.js';
 
 export default defineConfig([
   baseConfig,
-  {
-    files: ['**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx}'],
-    ...reactPlugin.configs.flat.recommended,
-  },
-  {
-    files: ['**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx}'],
-    ...reactPlugin.configs.flat['jsx-runtime'],
-  },
+  // eslint-plugin-react still uses context APIs that were removed in ESLint 10.
+  fixupConfigRules([
+    {
+      files: ['**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx}'],
+      ...reactPlugin.configs.flat.recommended,
+    },
+    {
+      files: ['**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx}'],
+      ...reactPlugin.configs.flat['jsx-runtime'],
+    },
+  ]),
   {
     files: ['**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx}'],
     ...jsxA11y.flatConfigs.recommended,
