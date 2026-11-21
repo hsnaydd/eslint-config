@@ -3,6 +3,10 @@
 ## [2.0.1](https://github.com/hsnaydd/eslint-config/compare/v2.0.0...v2.0.1) (2026-11-21)
 
 
+### 📦 Package renamed
+
+* This package was previously published as `@atolye15/eslint-config`. It now continues as `@hsnaydd/eslint-config`. Version 2.0.0 is also available under the new name with the same rules. To migrate, replace the package name in your `package.json` and in the imports of your ESLint config.
+
 ### Bug Fixes
 
 * enable the recommended Next.js rules in the next preset ([aec9434](https://github.com/hsnaydd/eslint-config/commit/aec9434f7bcc7c712fe5bbf28c29812d9ab99be0))
