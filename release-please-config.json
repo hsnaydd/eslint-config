@@ -1,8 +1,10 @@
 {
+  "bootstrap-sha": "05d6d8e3e0a29a0680546596e132730cc187a9ee",
   "packages": {
     ".": {
       "release-type": "node",
-      "package-name": "@atolye15/eslint-config",
+      "package-name": "@hsnaydd/eslint-config",
+      "include-component-in-tag": false,
       "changelog-sections": [
         { "type": "feat", "section": "Features", "hidden": false },
         { "type": "fix", "section": "Bug Fixes", "hidden": false },

@@ -1,8 +1,10 @@
-# @atolye15/eslint-config
+# eslint-config
 
-Atolye15 shareable config for ESLint.
+> Shareable ESLint config for TypeScript, React, Next.js and Node.js, with Jest, Vitest and Storybook presets and Prettier formatting.
 
 Comprehensive ESLint configuration with built-in support for TypeScript, React, Next.js, Storybook, and Node.js. Includes optional presets for Jest and Vitest, automatic code formatting with Prettier, and best practices for modern JavaScript/TypeScript development.
+
+> **Migrating from `@atolye15/eslint-config`?** This package is its continuation under a new name. Replace the package in your `package.json` and update the imports in your ESLint config to `@hsnaydd/eslint-config`. The rules are unchanged and the version numbers continue from where they left off.
 
 ## Available Presets
 
@@ -16,24 +18,36 @@ Comprehensive ESLint configuration with built-in support for TypeScript, React, 
 
 ## Installation
 
-```bash
-yarn add -D @atolye15/eslint-config
+```console
+pnpm add -D @hsnaydd/eslint-config eslint prettier typescript
+
+# Or with npm:
+
+npm install @hsnaydd/eslint-config eslint prettier typescript --save-dev
+
+# Or with yarn:
+
+yarn add @hsnaydd/eslint-config eslint prettier typescript --dev
 ```
+
+_`@hsnaydd/eslint-config` does not install ESLint, Prettier or TypeScript for you. You must install these yourself._
 
 This package requires the following peer dependencies to be installed in your project:
 
-- ESLint `^9.39.0`
+- ESLint `^10.0.0`
 - TypeScript `^5.9.3`
-- Prettier `^3.6.2`
-- Jest `^30.2.0` (optional, only needed if using Jest preset)
-- Storybook `^10.0.0` (optional, only needed if using Storybook preset)
+- Prettier `^3.8.1`
+- Jest `^30.2.0` (optional, only needed if using the Jest preset)
+- Storybook `^10.2.9` (optional, only needed if using the Storybook preset)
+
+The Vitest preset needs `vitest` to be installed in your project.
 
 ## Usage
 
 Create an `eslint.config.mjs` file in your project root and extend this configuration:
 
 ```javascript
-import config from '@atolye15/eslint-config';
+import config from '@hsnaydd/eslint-config';
 
 // Use a single preset
 export default [...config.react];
@@ -66,7 +80,7 @@ export default [
 You can override or extend the default configuration by adding your own rules:
 
 ```javascript
-import config from '@atolye15/eslint-config';
+import config from '@hsnaydd/eslint-config';
 
 export default [
   ...config.react,
@@ -79,10 +93,6 @@ export default [
 ];
 ```
 
-## Contributing
+## [Changelog](https://github.com/hsnaydd/eslint-config/releases)
 
-Issues and pull requests are welcome on [GitHub](https://github.com/atolye15/eslint-config).
-
-## License
-
-MIT © [Atolye15](https://github.com/atolye15)
+## [License](LICENSE)
