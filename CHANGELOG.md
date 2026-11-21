@@ -1,5 +1,18 @@
 # Changelog
 
+## [2.0.1](https://github.com/hsnaydd/eslint-config/compare/v2.0.0...v2.0.1) (2026-11-21)
+
+
+### 📦 Package renamed
+
+* This package was previously published as `@atolye15/eslint-config`. It now continues as `@hsnaydd/eslint-config`. Version 2.0.0 is also available under the new name with the same rules. To migrate, replace the package name in your `package.json` and in the imports of your ESLint config.
+
+### Bug Fixes
+
+* enable the recommended Next.js rules in the next preset ([aec9434](https://github.com/hsnaydd/eslint-config/commit/aec9434f7bcc7c712fe5bbf28c29812d9ab99be0))
+* make the react and import plugins work with ESLint 10 ([1bddf4b](https://github.com/hsnaydd/eslint-config/commit/1bddf4b6dcd82920b86c9ed031ee48b2c91be9df))
+* replace the deprecated @typescript-eslint/no-loop-func rule with the core rule ([2c20ac6](https://github.com/hsnaydd/eslint-config/commit/2c20ac6025903340f5d028b8099fafcd095553a9))
+
 ## 2.0.0 (2026-02-18)
 
 
