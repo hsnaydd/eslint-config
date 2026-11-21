@@ -75,6 +75,29 @@ export default [
 ];
 ```
 
+### TypeScript
+
+Some rules for `.ts` and `.tsx` files need type information, so tell the TypeScript parser where to find your `tsconfig.json`:
+
+```javascript
+import config from '@hsnaydd/eslint-config';
+
+export default [
+  ...config.react,
+  {
+    files: ['**/*.ts?(x)'],
+    languageOptions: {
+      parserOptions: {
+        projectService: true,
+        tsconfigRootDir: import.meta.dirname,
+      },
+    },
+  },
+];
+```
+
+Without this, ESLint stops with a "You have used a rule which requires type information" error on TypeScript files. JavaScript-only projects can skip this step, but they still need `typescript` installed, because the config parses all files with the TypeScript parser.
+
 ## Customizing Rules
 
 You can override or extend the default configuration by adding your own rules:
@@ -88,8 +111,8 @@ export default [
     files: ['**/*.tsx'],
     rules: {
       // other configs...
-    }
-  }
+    },
+  },
 ];
 ```
 
