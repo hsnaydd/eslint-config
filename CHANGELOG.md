@@ -1,5 +1,27 @@
 # Changelog
 
+## [3.0.0](https://github.com/hsnaydd/eslint-config/compare/v2.0.1...v3.0.0) (2026-11-23)
+
+
+### ⚠ BREAKING CHANGES
+
+* TypeScript 6.0 is now required. TypeScript 5 is no longer supported.
+
+### Features
+
+* upgrade @next/eslint-plugin-next to v16 ([bc31d8b](https://github.com/hsnaydd/eslint-config/commit/bc31d8b915bb7563cd8bc341e805d030264664f8))
+* upgrade eslint-plugin-n to v18 ([fe0f559](https://github.com/hsnaydd/eslint-config/commit/fe0f559ce80c48184a1ab8b1a8e3fb0b0ee222a3))
+
+
+### Bug Fixes
+
+* define globals for JavaScript files ([d82e1f3](https://github.com/hsnaydd/eslint-config/commit/d82e1f387c633ea50807a9fbc7908f32931121b9))
+
+
+### Build System
+
+* require TypeScript 6 ([2601f76](https://github.com/hsnaydd/eslint-config/commit/2601f76277f5eb4234ce2778d4095037076cb3eb))
+
 ## [2.0.1](https://github.com/hsnaydd/eslint-config/compare/v2.0.0...v2.0.1) (2026-11-21)
 
 
