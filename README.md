@@ -98,6 +98,10 @@ export default [
 
 Without this, ESLint stops with a "You have used a rule which requires type information" error on TypeScript files. JavaScript-only projects can skip this step, but they still need `typescript` installed, because the config parses all files with the TypeScript parser.
 
+### Globals
+
+Global variables are defined for JavaScript files depending on the preset: `base` only defines the globals that browsers and Node.js share (such as `console`, `setTimeout` and `URL`), `react` and `next` add the browser globals, `node` adds the Node.js globals, and `jest` and `vitest` add the test globals. If your code runs somewhere else, add its globals with `languageOptions.globals`. TypeScript files are not affected, because TypeScript checks undefined variables itself.
+
 ## Customizing Rules
 
 You can override or extend the default configuration by adding your own rules:

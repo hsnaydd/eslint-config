@@ -88,6 +88,27 @@ const cases = [
     rules: [],
   },
   {
+    name: 'defines globals shared by browsers and Node.js in JavaScript files',
+    presets: ['base'],
+    file: 'a.js',
+    code: "export const parse = (value) => new URL(value, 'https://example.com');\n",
+    rules: [],
+  },
+  {
+    name: 'does not define browser globals without the react preset',
+    presets: ['base'],
+    file: 'a.js',
+    code: 'export const getWidth = () => window.innerWidth;\n',
+    rules: ['no-undef'],
+  },
+  {
+    name: 'does not define Node.js globals without the node preset',
+    presets: ['base'],
+    file: 'a.js',
+    code: 'export const getMode = () => process.env.NODE_ENV;\n',
+    rules: ['no-undef'],
+  },
+  {
     name: 'reports unused variables',
     presets: ['base'],
     file: 'a.ts',
@@ -130,6 +151,20 @@ const cases = [
     file: 'a.ts',
     code: "import { parse } from 'node:url';\n\nexport const url = parse('https://example.com');\n",
     rules: ['n/no-deprecated-api'],
+  },
+  {
+    name: 'defines Node.js globals in JavaScript files',
+    presets: ['node'],
+    file: 'a.js',
+    code: 'export const getMode = () => process.env.NODE_ENV;\n',
+    rules: [],
+  },
+  {
+    name: 'does not define browser globals in Node.js',
+    presets: ['node'],
+    file: 'a.js',
+    code: 'export const getWidth = () => window.innerWidth;\n',
+    rules: ['no-undef'],
   },
 
   // react
@@ -196,6 +231,13 @@ const cases = [
     code: 'export function Example({ children }: { children: React.ReactNode }): React.JSX.Element {\n  return <>{children}</>;\n}\n',
     rules: [],
   },
+  {
+    name: 'defines browser globals in JavaScript files',
+    presets: ['react'],
+    file: 'a.js',
+    code: 'export const getWidth = () => window.innerWidth;\n',
+    rules: [],
+  },
 
   // next
   {
@@ -250,6 +292,13 @@ const cases = [
     file: 'example.test.ts',
     code: "import { expect, it } from 'vitest';\n\nit('works', () => {\n  expect(1).toEqual(1);\n});\n",
     rules: ['vitest/prefer-to-be'],
+  },
+  {
+    name: 'defines Vitest globals in JavaScript files',
+    presets: ['base', 'vitest'],
+    file: 'example.test.js',
+    code: "it('works', () => {\n  expect(1).toBe(1);\n});\n",
+    rules: [],
   },
 
   // storybook
