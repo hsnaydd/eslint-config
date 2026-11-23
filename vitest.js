@@ -6,6 +6,8 @@ export default defineConfig({
   plugins: {
     vitest,
   },
+  // Globals for projects that enable Vitest's `globals` option.
+  languageOptions: vitest.configs.env.languageOptions,
   rules: {
     ...vitest.configs.recommended.rules,
     'vitest/prefer-to-be': 'error',

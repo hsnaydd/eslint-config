@@ -4,6 +4,7 @@ import js from '@eslint/js';
 import importPlugin from 'eslint-plugin-import';
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
 import { defineConfig } from 'eslint/config';
+import globals from 'globals';
 import tseslint from 'typescript-eslint';
 
 import bestPractices from './rules/best-practices.js';
@@ -28,4 +29,11 @@ export default defineConfig([
   strict,
   style,
   typescript,
+  {
+    // Only the globals shared by browsers and Node.js; the react and node
+    // presets add the rest for their environment.
+    languageOptions: {
+      globals: globals['shared-node-browser'],
+    },
+  },
 ]);

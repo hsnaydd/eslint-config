@@ -35,7 +35,7 @@ _`@hsnaydd/eslint-config` does not install ESLint, Prettier or TypeScript for yo
 This package requires the following peer dependencies to be installed in your project:
 
 - ESLint `^10.0.0`
-- TypeScript `^5.9.3`
+- TypeScript `^6.0.0` (`typescript-eslint` does not support TypeScript 7 yet)
 - Prettier `^3.8.1`
 - Jest `^30.2.0` (optional, only needed if using the Jest preset)
 - Storybook `^10.2.9` (optional, only needed if using the Storybook preset)
@@ -97,6 +97,10 @@ export default [
 ```
 
 Without this, ESLint stops with a "You have used a rule which requires type information" error on TypeScript files. JavaScript-only projects can skip this step, but they still need `typescript` installed, because the config parses all files with the TypeScript parser.
+
+### Globals
+
+Global variables are defined for JavaScript files depending on the preset: `base` only defines the globals that browsers and Node.js share (such as `console`, `setTimeout` and `URL`), `react` and `next` add the browser globals, `node` adds the Node.js globals, and `jest` and `vitest` add the test globals. If your code runs somewhere else, add its globals with `languageOptions.globals`. TypeScript files are not affected, because TypeScript checks undefined variables itself.
 
 ## Customizing Rules
 

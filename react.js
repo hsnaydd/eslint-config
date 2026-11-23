@@ -3,6 +3,7 @@ import jsxA11y from 'eslint-plugin-jsx-a11y';
 import reactPlugin from 'eslint-plugin-react';
 import testingLibrary from 'eslint-plugin-testing-library';
 import { defineConfig } from 'eslint/config';
+import globals from 'globals';
 
 import baseConfig from './base.js';
 import storybookConfig from './storybook.js';
@@ -42,6 +43,9 @@ export default defineConfig([
   storybookConfig,
   {
     files: ['**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx}'],
+    languageOptions: {
+      globals: globals.browser,
+    },
     settings: {
       react: {
         version: 'detect',
