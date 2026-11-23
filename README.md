@@ -35,7 +35,7 @@ _`@hsnaydd/eslint-config` does not install ESLint, Prettier or TypeScript for yo
 This package requires the following peer dependencies to be installed in your project:
 
 - ESLint `^10.0.0`
-- TypeScript `^5.9.3`
+- TypeScript `6.0.x` (the latest version `typescript-eslint` supports)
 - Prettier `^3.8.1`
 - Jest `^30.2.0` (optional, only needed if using the Jest preset)
 - Storybook `^10.2.9` (optional, only needed if using the Storybook preset)
