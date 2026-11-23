@@ -51,14 +51,14 @@ importers:
         specifier: ^7.37.5
         version: 7.37.5(eslint@10.15.0)
       eslint-plugin-react-hooks:
-        specifier: 7.0.1
-        version: 7.0.1(eslint@10.15.0)
+        specifier: 7.1.1
+        version: 7.1.1(eslint@10.15.0)
       eslint-plugin-storybook:
         specifier: ^10.6.8
         version: 10.6.8(eslint@10.15.0)(typescript@6.0.3)
       eslint-plugin-testing-library:
-        specifier: ^7.16.2
-        version: 7.16.2(eslint@10.15.0)(typescript@6.0.3)
+        specifier: ^7.16.3
+        version: 7.16.3(eslint@10.15.0)(typescript@6.0.3)
       typescript-eslint:
         specifier: ^8.73.0
         version: 8.73.0(eslint@10.15.0)(typescript@6.0.3)
@@ -1969,11 +1969,11 @@ packages:
       eslint-config-prettier:
         optional: true
 
-  eslint-plugin-react-hooks@7.0.1:
-    resolution: {integrity: sha512-O0d0m04evaNzEPoSW+59Mezf8Qt0InfgGIBJnpC0h3NH/WjUAR7BIKUfysC6todmtiZ/A0oUVS8Gce0WhBrHsA==}
+  eslint-plugin-react-hooks@7.1.1:
+    resolution: {integrity: sha512-f2I7Gw6JbvCexzIInuSbZpfdQ44D7iqdWX01FKLvrPgqxoE7oMj8clOfto8U6vYiz4yd5oKu39rRSVOe1zRu0g==}
     engines: {node: '>=18'}
     peerDependencies:
-      eslint: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0-0 || ^9.0.0
+      eslint: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0-0 || ^9.0.0 || ^10.0.0
 
   eslint-plugin-react@7.37.5:
     resolution: {integrity: sha512-Qteup0SqU15kdocexFNAJMvCJEfa2xUKNV4CC1xsVMrIIqEy3SQ/rqyxCWNzfrd3/ldy6HMlD2e0JDVpDg2qIA==}
@@ -1986,8 +1986,8 @@ packages:
     peerDependencies:
       eslint: '>=8'
 
-  eslint-plugin-testing-library@7.16.2:
-    resolution: {integrity: sha512-8gleGnQXK2ZA3hHwjCwpYTZvM+9VsrJ+/9kDI8CjqAQGAdMQOdn/rJNu7ZySENuiWlGKQWyZJ4ZjEg2zamaRHw==}
+  eslint-plugin-testing-library@7.16.3:
+    resolution: {integrity: sha512-h1c8GVno1HzqQadJh1P5FS2hj5lWZV/MpqYYmnt/XQiylC85noUVT4vRE243FDCG1G4Qt5a+awLBO3GTfNb/fQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
       eslint: ^8.57.0 || ^9.0.0 || ^10.0.0
@@ -5404,7 +5404,7 @@ snapshots:
     optionalDependencies:
       eslint-config-prettier: 10.1.8(eslint@10.15.0)
 
-  eslint-plugin-react-hooks@7.0.1(eslint@10.15.0):
+  eslint-plugin-react-hooks@7.1.1(eslint@10.15.0):
     dependencies:
       '@babel/core': 7.29.13
       '@babel/parser': 7.29.15
@@ -5447,7 +5447,7 @@ snapshots:
       - supports-color
       - typescript
 
-  eslint-plugin-testing-library@7.16.2(eslint@10.15.0)(typescript@6.0.3):
+  eslint-plugin-testing-library@7.16.3(eslint@10.15.0)(typescript@6.0.3):
     dependencies:
       '@typescript-eslint/scope-manager': 8.73.0
       '@typescript-eslint/utils': 8.73.0(eslint@10.15.0)(typescript@6.0.3)
